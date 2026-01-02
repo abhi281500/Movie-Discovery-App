@@ -1,0 +1,209 @@
+/* Poore app ka layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark theme */
+  color: white;
+}
+
+/* Home page ki movies grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 50px;
+  padding: 40px;
+}
+
+
+/* Movie Card ka style */
+.movie-card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  font-size: 1rem;
+  padding: 20px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card p {
+  padding: 0 10px 10px;
+  margin: 0;
+  color: #ffc107; /* Gold color rating */
+}
+
+/* Movie Details Page ka style */
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .movie-details {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+.movie-details img {
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+}
+
+.detail-content {
+  flex: 1;
+}
+
+
+
+
+/* Jab koi movie na mile (No movies found) */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 50px;
+  grid-column: 1 / -1; /* Pure grid ki width cover karne ke liye */
+}
+
+/* Loading aur Error messages ke liye */
+.status-message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+
+/* Layout for Poster and Text */
+.Moviedtails {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.Moviedtails > img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.Moviedtails h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Add to Watchlist Button */
+.Moviedtails button {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Cast Section with Images */
+.Cast {
+  padding: 0 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Cast h3 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.Cast ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 4fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.Cast li {
+  text-align: center;
+  background: #1e1e1e;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Cast li img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.Cast li p {
+  font-size: 0.9rem;
+  margin: 5px 0 2px;
+  padding: 0 5px;
+}
+
+.Cast li span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .Moviedtails {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+.watchlist-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.watchlist-btn:hover {
+  background-color: #b20710;
+  transform: translateY(-1px);
+}
+
+
